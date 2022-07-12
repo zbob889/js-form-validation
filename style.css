@@ -17,3 +17,15 @@
     height: 600px;
     width: 600px;
 }
+
+.form {
+    outline: none;
+}
+
+.form:valid {
+    border-color: blue;
+}
+
+.form:invalid {
+    border-color: red;
+}

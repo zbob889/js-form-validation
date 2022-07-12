@@ -22,3 +22,21 @@ zip.addEventListener('input', () => {
         zip.setCustomValidity('');
     }
 });
+
+password.addEventListener('input', () => {
+    if (password.value.length < 8) {
+        password.setCustomValidity("Your password must be at least 8 characters long!");
+        password.reportValidity();
+    } else {
+        password.setCustomValidity('');
+    }
+});
+
+passwordConfirmation.addEventListener('input', () => {
+    if (passwordConfirmation.value != password.value) {
+        passwordConfirmation.setCustomValidity("Your passwords don't match!");
+        passwordConfirmation.reportValidity();
+    } else {
+        passwordConfirmation.setCustomValidity('');
+    }
+});
